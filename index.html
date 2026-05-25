@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Calcul heures</h1>
+    <div>
+        <div class="field_box">
+            <label for="">Début</label>
+            <div>
+                <input id="start_hour" type="number" max="23" min="0"> :
+                <input id="start_min" type="number" max="59" min="0">
+            </div>
+        </div>
+
+        <div class="field_box">
+            <label for="">Fin</label>
+            <div>
+                <input id="stop_hour" type="number" max="23" min="0"> :
+                <input id="stop_min" type="number" max="59" min="0">
+            </div>
+        </div>
+
+        <div class="field_box">
+            <label for="">Pause (min)</label>
+            <input id="break" type="number" max="23" min="0">
+        </div>
+
+        <button id="btn">CALCULER</button>
+
+        <div class="result_box">
+            <div>
+                Total : <span id="result_tot">0</span>
+            </div>
+        </div>
+
+        <div class="result_box">
+            <div>
+                Sup : <span id="result_sup">0</span>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

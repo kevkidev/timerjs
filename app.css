@@ -1,0 +1,37 @@
+body {
+    /* text-align: center; */
+    background-color: rgb(238, 238, 238);
+    font-size: 20px;
+}
+
+.field_box {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+input {
+    padding: 16px;
+    border: none;
+    font-size: 30px;
+}
+
+button {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(232, 255, 232);
+}
+
+.result_box {
+    /* font-weight: bold; */
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+span {
+    font-weight: bold;
+    background-color: white;
+    padding: 10px;
+}
