@@ -21,7 +21,6 @@ function calculateWorkTime() {
     if (sup.hour < 0 || sup.min < 0) {
         $("result_sup").innerText = "-"
     }
-    console.log(sup);
 
     $("result_sup").innerText += Math.abs(sup.hour) + "h" + Math.abs(sup.min);
 
@@ -68,3 +67,5 @@ function getHours(minutes) {
 function getMinutes(hour, minutes) {
     return hour * 60 + minutes;
 }
+
+calculateWorkTime()
