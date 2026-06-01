@@ -5,35 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
-    <title>Document</title>
+    <title>K_timer</title>
 </head>
 
 <body>
+    <!-- <a href="sommeil.html">Zzzz!</a> -->
     <h3>Calcul heures</h1>
+        <div class="menu">
+        </div>
         <div>
+            <div class="field_box">
+                <label for="">Heures à travailler</label>
+                <div>
+                    <input id="base_hour" type="number" max="23" min="0" value="7" step="1"
+                        onchange="calculateWorkTime()"> :
+                    <input id="base_min" type="number" max="59" min="0" value="0" step="5"
+                        onchange="calculateWorkTime()">
+                </div>
+            </div>
+
             <div class="field_box">
                 <label for="">Début</label>
                 <div>
-                    <input id="start_hour" type="number" max="23" min="0" value="8"> :
-                    <input id="start_min" type="number" max="59" min="0" value="0">
+                    <input id="start_hour" type="number" max="23" min="0" value="8" step="1"
+                        onchange="calculateWorkTime()"> :
+                    <input id="start_min" type="number" max="59" min="0" value="0" step="5"
+                        onchange="calculateWorkTime()">
                 </div>
             </div>
 
             <div class="field_box">
-                <label for="">Fin</label>
+                <label for="">Pause</label>
                 <div>
-                    <input id="stop_hour" type="number" max="23" min="0" value="16"> :
-                    <input id="stop_min" type="number" max="59" min="0" value="30">
+                    <div>
+                        <input id="break_hour" type="number" max="23" min="0" value="0" step="1"
+                            onchange="calculateEndTime();calculateWorkTime()"> :
+                        <input id="break_min" type="number" max="59" min="0" value="30" step="5"
+                            onchange="calculateEndTime();calculateWorkTime()">
+                        <label id="break_hours"></label>
+                    </div>
                 </div>
+                <div id="simu_end_hours"></div>
             </div>
 
             <div class="field_box">
-                <label for="">Pause (min)</label>
+                <label for="">Fin Réelle</label>
                 <div>
-                    <input id="break" type="number" max="23" min="0" value="30">
+                    <input id="stop_hour" type="number" max="23" min="0" value="16" step="1"
+                        onchange="calculateWorkTime()"> :
+                    <input id="stop_min" type="number" max="59" min="0" value="30" step="5"
+                        onchange="calculateWorkTime()">
                 </div>
             </div>
-
 
             <div class="field_box">
                 <label for="">Total</label>
@@ -44,7 +67,7 @@
                 <label for="">Sup</label>
                 <span id="result_sup">0</span>
             </div>
-            <button id="btn">CALCULER</button>
+            <button onclick="calculateWorkTime()">CALCULER</button>
         </div>
         <script src="app.js"></script>
 </body>
